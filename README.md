@@ -56,12 +56,34 @@
 
 <br />
 
-## 🔖 prop-types 라이브러리
-- props를 전달 할 때, 잘못된 타입을 전달했을 때 경고 메시지를 보내주는 라이브러리
+## 👨🏻‍💻 prop-types 라이브러리
+🔖 props를 전달 할 때, 잘못된 타입을 전달했을 때 경고 메시지를 보내주는 라이브러리
+
+```javascript
+    MyButton.propTypes = {
+        //title은 string이여야 하며, 필수로 입력해야 한다.
+        //onPress라는 함수가 필수적으로 입력해야 한다.
+        title: PropTypes.string.isRequired,
+        onPress: PropTypes.func.isRequired,
+    };
+
+```
 
 <br />
 
+## 👨🏻‍💻 JSX에서 if문 사용
+- JSX는 즉시 실행 함수로 작성해야지 if문을 사용할 수 있다.
 
+```javascript
+    <Text>
+        {(() => {
+            if(name === 'Minjae') return 'My name is Minjae';
+            else return 'My First React Native';
+        })()}
+    </Text>
+```
+
+<br />
 
 ## 📈 Client 참고 사항 및 패키지
 
