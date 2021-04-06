@@ -57,7 +57,7 @@
 <br />
 
 ## 👨🏻‍💻 prop-types 라이브러리
-🔖 props를 전달 할 때, 잘못된 타입을 전달했을 때 경고 메시지를 보내주는 라이브러리
+- props를 전달 할 때, 잘못된 타입을 전달했을 때 경고 메시지를 보내주는 라이브러리
 
 ```javascript
     MyButton.propTypes = {
@@ -188,6 +188,47 @@
 ```
 <br />
 
+## 👨🏻‍💻 스타일드 컴포는트(Styled-components) 라이브러리
+🔖 https://styled-components.com/
+
+### 🏃 기본적인 Styled-components
+- 리액트 네이티브의 스타일에서 웹 프로그래밍과의 차이로 이한 불편함을 해소시켜 주는 라이브러리 
+- **styled.[컴포넌트 이름]** 형태 뒤에 **백틱(`)**을 사용하여 만든 문자열을 붙이고 그 안에 스타일을 지정하면 된다. 이러한 문법을 **태그드 템플릿 리터럴(Tagged Template Literals)** 이라고 부른다.
+
+```javascript
+    //스타일 적용 예시
+    const Container = styled.View`
+        flex: 1;
+        background-color: #fff;
+        align-items: center;
+        justify-content: center;
+    `;
+```
+<br />
+
+### 🏃 Styled-component에 props 사용하기
+- Styled-components 에서는 스타일을 작성하는 벡터 안에서 props에 접근할 수 있다는 장점이 있습니다. 이 장점을 이용해 스타일을 작성하는 곳에서 조건에 따라 스타일을 변경할 수 있습니다.
+
+![props](https://user-images.githubusercontent.com/64779472/113683601-5a417c00-96ff-11eb-8f2f-fd64cf273c56.PNG)
+
+```javascript
+    const ButtonContainer = styled.TouchableOpacity`
+        background-color: ${props => props.title === 'Minjae' ? '#3498db' : '#9b59b6'};
+        border-radius: 15px;
+        padding: 15px 40px;
+        margin: 10px 0px;
+        justify-content: center;
+    `;
+
+    const Button = ({ title }) => {
+        return (
+            <ButtonContainer title={title}>
+                <Title>{title}</Title>
+            </ButtonContainer>
+        );
+    };
+```
+<br />
 
 ## 📈 Client 참고 사항 및 패키지
 
