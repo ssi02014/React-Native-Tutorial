@@ -161,6 +161,10 @@
 
 ## 👨🏻‍💻 Platform
 - Platform 모듈을 통해서 각 플랫폼마다 다른 코드가 적용되도록 코드를 작성할 수 있다.
+- iOS에서 shadow는 shadowColor(색), shadowOffset(거리), shadowOpacity(불투명도), shadowRadius(흐름 반경) 등의 스타일 속성이 존재합니다.
+- Android에서는 elevation 이라는 속성이 있습니다.
+
+![platform](https://user-images.githubusercontent.com/64779472/113681358-d5edf980-96fc-11eb-8f82-f57ec6bc503f.PNG)
 
 ```javascript
     const styles = StyleSheet.create({
