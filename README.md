@@ -161,7 +161,26 @@
 
 ## 👨🏻‍💻 Platform
 - Platform 모듈을 통해서 각 플랫폼마다 다른 코드가 적용되도록 코드를 작성할 수 있다.
+
 ```javascript
+    const styles = StyleSheet.create({
+    shadow: {
+        ...Platform.select({
+            ios: {
+                shadowColor: '#000',
+                shadowOffset: {
+                    width: 10,
+                    height: 10,
+                },
+                shadowOpacity: 0.5,
+                shadowRadius: 10,
+            },
+            android: {
+                elevation: 20,
+            }
+        }),
+    },
+});
 ```
 <br />
 

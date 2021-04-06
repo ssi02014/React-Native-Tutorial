@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Text, Button} from 'react-native';
 import { Header, Contents, Footer } from './components/chapter2/Layout';
+import Shadowbox from './components/chapter2/Shadowbox';
 
 const App = () => {
     const styles = StyleSheet.create({
@@ -26,9 +27,10 @@ const App = () => {
     return (
         <>
             <View style={styles.container}>
-                <Header></Header>
+                {/* <Header></Header>
                 <Contents></Contents>
-                <Footer></Footer>
+                <Footer></Footer> */}
+                <Shadowbox></Shadowbox>
             </View>
         </>
     );
