@@ -107,6 +107,36 @@
 
 ## 👨🏻‍💻 change 이벤트
 - 변화를 감지하는 change 이벤트는 TextInput 컴포넌트에서 많이 사용된다.
+- event객체의 **nativeEvent.text** 를 사용해서 text 값을 전달할 수 있다.
+- onChangeText: 컴포넌트의 텍스트가 변경될 때, 변경 된 텍스트의 문자열만 인수로 전달하며 호출된다.
+```javascript
+    const _onChange = e => {
+        setText(e.nativeEvent.text);
+    }
+
+    const _onChangeText = text => {
+        setText(text);
+    }
+
+    <TextInput 
+        style={{borderWidth: 1, padding: 10, fontSize: 20}}
+        placeholder="Enter a Text..."
+        // onChange={_onChange}
+        onChangeText={_onChangeText}
+    />
+```
+<br />
+
+## 👨🏻‍💻 Pressable 컴포넌트
+-
+```javascript
+```
+<br />
+
+## 👨🏻‍💻 change 이벤트
+-
+```javascript
+```
 <br />
 
 ## 📈 Client 참고 사항 및 패키지
