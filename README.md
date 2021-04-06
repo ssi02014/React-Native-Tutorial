@@ -128,8 +128,22 @@
 <br />
 
 ## 👨🏻‍💻 Pressable 컴포넌트
--
+- 기존의 TouchableOpacity 컴포넌트를 대체하는 Pressable 컴포넌트.
+- HitReact: 버튼 모양보다 약간 떨어진 부분까지 이벤트가 발생할 수 있게 해주는 pressable의 기능
+- PressRect: 버튼을 누른 상태에서 얼마나 멀어져야 유효 범위에서 벗어났다고 판단 할 수 있게 하는 기능 
+
+![pressable](https://user-images.githubusercontent.com/64779472/113674464-2e20fd80-96f5-11eb-816f-3e5876257834.PNG)
+
+
 ```javascript
+    import { Text, Pressable } from 'react-native';
+
+    <Pressable
+        pressRetentionOffset={{bottom:50, left: 50, right: 50, top: 50,}}
+        hitSlop={50}
+    >
+        <Text style={{padding:10, fontSize:30}}>{props.title}</Text>
+    </Pressable>
 ```
 <br />
 

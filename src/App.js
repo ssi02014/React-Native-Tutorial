@@ -4,6 +4,7 @@ import Counter from './components/Counter';
 import EventButton from './components/EventButton';
 import EventInput from './components/EventInput';
 import MyButton from './components/MyButton';
+import pressableButton from './components/pressableButton';
 
 const App = () => {
     const name = "Minjae"
@@ -23,17 +24,17 @@ const App = () => {
         <>
             <View style={styles.container}>
                 <Text style={styles.title}>
-                    {/* My Name is {name} */}
                     {(() => {
                         if(name === 'Minjae') return 'My name is Minjae';
                         else return 'My First React Native';
                     })()}
                 </Text>
-                <MyButton title="Minjae Button" onPress={() => alert('props')}></MyButton>
-                <MyButton title="Minjae Button" onPress={() => alert('children')}>Children Props</MyButton>
+                {/* <MyButton title="Minjae Button" onPress={() => alert('props')}></MyButton> */}
+                {/* <MyButton title="Minjae Button" onPress={() => alert('children')}>Children Props</MyButton> */}
                 <Counter />
                 <EventButton />
                 <EventInput />
+                {/* <pressableButton></pressableButton> */}
             </View>
         </>
     );
