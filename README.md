@@ -147,11 +147,23 @@
 ```
 <br />
 
-## 👨🏻‍💻 change 이벤트
--
+## 👨🏻‍💻 클래스 스타일링(여러개 스타일링 적용)
+- 클래스 스타일링은 컴포넌트의 태그에 직접 입력하는 방식이 아닌, 스타일시트에 정의된 스타일을 사용하는 방식이다.
+
+```javascript
+    //여러개의 스타일 적용1, 뒤에 오는 스타일이 앞에 있는 스타일을 덮음
+    <Text style={[styles.text, styles.error]}>Class Style-Error</Text>
+
+    //여러개의 스타일 적용2
+    <Text style={[styles.text, {color: 'green'}]}>Class Style-Text</Text>
+```
+<br />
+
+## 👨🏻‍💻 리액트 네이티브 스타일(레이아웃)
 ```javascript
 ```
 <br />
+
 
 ## 📈 Client 참고 사항 및 패키지
 

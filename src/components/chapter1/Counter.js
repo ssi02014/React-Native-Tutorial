@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-import MyButton from './MyButton';
+import MyButton from '../MyButton';
 
 const Counter = () => {
     const [count, setCount] = useState(0);
