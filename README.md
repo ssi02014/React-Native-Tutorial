@@ -93,6 +93,20 @@
 
 ![press](https://user-images.githubusercontent.com/64779472/113672119-43e0f380-96f2-11eb-995f-02f28a464c18.PNG)
 
+```javascript
+    <TouchableOpacity
+        onPressIn={_onPressIn}
+        onLongPress={_onLongPress}
+        onPressOut={_onPressOut}
+        onPress={_onPress}
+        //3초동안 클릭해야 onLongPress가 호출
+        delayLongPress={3000}
+    >
+```
+<br />
+
+## 👨🏻‍💻 change 이벤트
+- 변화를 감지하는 change 이벤트는 TextInput 컴포넌트에서 많이 사용된다.
 <br />
 
 ## 📈 Client 참고 사항 및 패키지

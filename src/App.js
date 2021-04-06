@@ -1,6 +1,7 @@
 import React from 'react';
 import {View, StyleSheet, Text, Button} from 'react-native';
 import Counter from './components/Counter';
+import EventButton from './components/EventButton';
 import MyButton from './components/MyButton';
 
 const App = () => {
@@ -30,6 +31,7 @@ const App = () => {
                 <MyButton title="Minjae Button" onPress={() => alert('props')}></MyButton>
                 <MyButton title="Minjae Button" onPress={() => alert('children')}>Children Props</MyButton>
                 <Counter />
+                <EventButton />
             </View>
         </>
     );
