@@ -230,6 +230,33 @@
 ```
 <br />
 
+### 🏃 Styled-components에 attrs 사용하기
+- attrs는 Styled-components에서 속성을 설정할 때 사용한다.
+
+![attrs](https://user-images.githubusercontent.com/64779472/113809631-80b8f300-97a3-11eb-9164-94c531acb1c7.PNG)
+
+```javascript
+    //components/Input.js
+    const StyledInput = styled.TextInput.attrs(props => ({
+        placeholder: 'Enter a text...',
+        placeholderTextColor: props.borderColor,
+    }))`
+        (...)
+        border-color: ${props => props.borderColor};
+    `;
+
+    const Input = ({borderColor}) => {
+        return (
+            <StyledInput borderColor={borderColor} />
+        )
+    }
+
+    //App.js
+    <Input borderColor='#3498db'></Input>
+    <Input borderColor='#9b59b6'></Input>
+```
+<br />
+
 ## 📈 Client 참고 사항 및 패키지
 
 <br />
